@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --fontRoboto: 'Roboto', sans-serif;
+  --purpleColor: #9b59b6;
+  --blueColor: #3498DB;
+  --whiteColor: #fff;
+  --redColor: #e74c3c;
+  --fieldColor: rgba(255, 255, 255, .5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme="dark"] {
+  --fontRoboto: 'Roboto', sans-serif;
+  --purpleColor: #42234F;
+  --blueColor: #144A6E;
+  --whiteColor: #877568;
+  --redColor: #c0392b;
+  --fieldColor: #221627;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-track {
+  /*box-shadow: inset 0 0 5px rgba(0, 0, 0,.2); */
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--purpleColor); 
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blueColor); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 }
