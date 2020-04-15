@@ -1,0 +1,13 @@
+.content-container {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+}
+
+.content-box {
+    width: 80vw;
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+}

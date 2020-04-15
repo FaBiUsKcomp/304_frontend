@@ -1,0 +1,17 @@
+.footer-container {
+    grid-area: footer;
+    background-color: var(--purpleColor);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    font-family: var(--fontRoboto);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-container h2 a {
+    color: var(--whiteColor);
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: unset;
+}

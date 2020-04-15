@@ -1,0 +1,86 @@
+.navbar-container {
+    grid-area: nav;
+    background-color: var(--purpleColor);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    display: flex;
+    font-family: var(--fontRoboto);
+}
+
+.navbar-tittle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
+}
+
+.navbar-tittle a {
+    text-decoration: unset;
+}
+
+.navbar-tittle h1 {
+    color: var(--whiteColor);
+    font-size: 4vmin;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    flex: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: var(--whiteColor);
+    text-align: center;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: unset;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+
+.active {
+    background-color: #8e44ad;
+}
+
+.navbar-links a:not(:last-child) {
+    border-right: 2px solid rgba(0, 0, 0, .2);
+}
+
+.navbar-links a:hover {
+    opacity: .7;
+    background-color: #8e44ad;
+}
+
+.navbar-theme {
+    flex: 1;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whiteColor);
+    letter-spacing: 1px;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.navbar-theme button {
+    border: none;
+    width: 30px;
+    height: 20px;
+    border-radius: 7px;
+    background-color: var(--blueColor);
+    color: var(--whiteColor);
+    outline: 0;
+}
+
+.navbar-theme button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
