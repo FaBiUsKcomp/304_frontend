@@ -2,9 +2,19 @@
 
 :root {
   --fontRoboto: 'Roboto', sans-serif;
+
+  /* New Design */
+  --yankeersBlue: #161B40;
+  --pictonBlue: #43BEE5;
+  --follyRed: #F40058;
+  --orangeWeb: #EFA500;
+  --mediumseaGreen: #41B853;
+  --purpleDark: #4A5AD9;
+  --whiteColor: #fff;
+
+  /* Old Design */
   --purpleColor: #9b59b6;
   --blueColor: #3498DB;
-  --whiteColor: #fff;
   --redColor: #e74c3c;
   --fieldColor: rgba(255, 255, 255, .5);
 }
