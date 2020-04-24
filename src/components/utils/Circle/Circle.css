@@ -1,0 +1,33 @@
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.yankeersBlue {
+    background-color: #161B40;
+}
+
+.pictonBlue {
+    background-color: #43BEE5
+}
+
+.follyRed {
+    background-color: #F40058;
+}
+
+.orangeWeb {
+    background-color: #EFA500;
+}
+
+.mediumseaGreen {
+    background-color: #41B853;
+}
+
+.purpleDark {
+    background-color: #4A5AD9;
+}
+
+.mright {
+    margin-right: 10px;
+}
