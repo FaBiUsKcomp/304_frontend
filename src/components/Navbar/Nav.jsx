@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Nav.css'
 
-import { 
-  AttachMoneyRounded, 
-  DateRangeRounded,
-  AssessmentRounded,
-  ChatRounded,
-  TagFacesRounded
-} from '@material-ui/icons'
+import Circle from '../utils/Circle/Circle'
+import Arrowdrop from '../../static/img/arrowdrop.svg';
 
 export default function Nav(props) {
-
-  const [tittle, setTittle] = useState('')
 
   const handleSign = (e) => {
     e.preventDefault()
@@ -23,18 +16,28 @@ export default function Nav(props) {
   return (
     <nav className='navbar-container'>
       <div className='navbar-tittle'>
-        <Link to='/home' title='Inicio' onClick={e => setTittle('304 - Caixinha')}><h1 title='Atual'>{tittle || '304 - Caixinha'}</h1></Link>
+        <div className='navbar-tittle-box'>
+          <Link to='/home' title='Inicio'><h1 title='Atual'>304</h1></Link>
+        </div>
       </div>
       <div className='navbar-links'>
-        <Link to='/home' title='Caixinha' onClick={e => setTittle('304 - Caixinha')}>Caixinha <AttachMoneyRounded /></Link>
-        <Link to='/home/limpeza' title='Limpeza' onClick={e => setTittle('304 - Limpeza')}>Limpeza <DateRangeRounded /></Link>
-        <Link to='/home/dispensa' title='Dispensa' onClick={e => setTittle('304 - Dispensa')}>Dispensa <AssessmentRounded /></Link>
-        <Link to='/home/chat' title='Chat' onClick={e => setTittle('304 - Chat')}>Chat <ChatRounded /></Link>
-        {/*<Link to='/home/meme' title='Memes' onClick={e => setTittle('304 - Memes')}>Memes <TagFacesRounded /></Link>*/}
+        <Link to='/home' title='Caixinha'><Circle type="pictonBlue" margin="mright" />Caixinha</Link>
+        <Link to='/home/limpeza' title='Limpeza'><Circle type="orangeWeb" margin="mright" />Limpeza</Link>
+        <Link to='/home/dispensa' title='Dispensa'><Circle type="follyRed" margin="mright" />Dispensa</Link>
+        <Link to='/home/chat' title='Chat'><Circle type="mediumseaGreen" margin="mright" />Chat</Link>
       </div>
-      <div className='navbar-theme'>
-        {`${JSON.parse(localStorage.getItem('user')).username}`}
-        <button type='button' onClick={handleSign}>Sair</button>
+      <div className='navbar-userstatus'>
+        <div className='navbar-userstatus-box'>
+          <div className='navbar-userstatus-pic'>
+
+          </div>
+          <div className='navbar-userstatus-username'>
+            <p>{`${JSON.parse(localStorage.getItem('user')).username}`}</p>
+          </div>
+          <div className='navbar-userstatus-username'>
+            <button type='button' onClick={handleSign}><img src={Arrowdrop} alt="Opções" /></button>
+          </div>
+        </div>
       </div>
     </nav>
   )

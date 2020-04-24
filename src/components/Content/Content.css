@@ -2,10 +2,11 @@
     grid-area: content;
     display: flex;
     justify-content: center;
+    background-color: var(--yankeersBlue);
 }
 
 .content-box {
-    width: 80vw;
+    width: 90vw;
     border-left: 1px solid rgba(0, 0, 0, .2);
     border-right: 1px solid rgba(0, 0, 0, .2);
     display: flex;
