@@ -1,3 +1,51 @@
 .money-box {
     flex: 1;
+    border-bottom: 15px solid var(--pictonBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.money-box-container {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.money-box-container h3 {
+    font-size: 1.3vw;
+    font-weight: 300;
+    color: var(--pictonBlue);
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.money-box-container h3 img {
+    width: 1.5vw;
+    margin-right: 5px;
+}
+
+.money-content {
+    flex: 1;
+    display: flex;
+}
+
+.money-content-action {
+    flex: 1.6;
+    display: flex;
+    padding: 1%;
+}
+
+.money-content-action-box {
+    flex: 1;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
+    border-radius: 15px;
+}
+
+.money-content-info {
+    flex: 1;
 }

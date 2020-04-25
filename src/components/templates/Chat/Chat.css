@@ -1,6 +1,6 @@
 .chat-box {
     flex: 1;
-    max-width: 1100px;
+    border-bottom: 15px solid var(--mediumseaGreen);
     display: flex;
     padding: 10px;
     color: #333;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Nav.css'
 
 import Circle from '../utils/Circle/Circle'
@@ -21,10 +21,10 @@ export default function Nav(props) {
         </div>
       </div>
       <div className='navbar-links'>
-        <Link to='/home' title='Caixinha'><Circle type="pictonBlue" margin="mright" />Caixinha</Link>
-        <Link to='/home/limpeza' title='Limpeza'><Circle type="orangeWeb" margin="mright" />Limpeza</Link>
-        <Link to='/home/dispensa' title='Dispensa'><Circle type="follyRed" margin="mright" />Dispensa</Link>
-        <Link to='/home/chat' title='Chat'><Circle type="mediumseaGreen" margin="mright" />Chat</Link>
+        <NavLink exact={true} activeClassName='is-active-pictonBlue' to='/home' title='Caixinha'><Circle type="pictonBlue" margin="mright" />Caixinha</NavLink>
+        <NavLink activeClassName='is-active-orangeWeb' to='/home/limpeza' title='Limpeza'><Circle type="orangeWeb" margin="mright" />Limpeza</NavLink>
+        <NavLink activeClassName='is-active-follyRed' to='/home/dispensa' title='Dispensa'><Circle type="follyRed" margin="mright" />Dispensa</NavLink>
+        <NavLink activeClassName='is-active-mediumseaGreen e' to='/home/chat' title='Chat'><Circle type="mediumseaGreen" margin="mright" />Chat</NavLink>
       </div>
       <div className='navbar-userstatus'>
         <div className='navbar-userstatus-box'>
