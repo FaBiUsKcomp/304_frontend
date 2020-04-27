@@ -1,0 +1,39 @@
+.btndefault {
+    width: 100px;
+    height: 80%;
+    border: none;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin: 0 40px;
+    font-weight: bold;
+}
+
+.btndefault:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.btncolor-pictonBlue {
+    background-color: var(--pictonBlue);
+    color: var(--whiteColor);
+}
+
+.btncolor-follyRed {
+    background-color: var(--follyRed);
+    color: var(--whiteColor);
+}
+
+.btncolor-orangeWeb {
+    background-color: var(--orangeWeb);
+    color: #333;
+}
+
+.btncolor-mediumseaGreen {
+    background-color: var(--mediumseaGreen);
+    color: var(--whiteColor);
+}
+
+.btncolor-purpleDark {
+    background-color: var(--purpleDark);
+    color: var(--whiteColor);
+}

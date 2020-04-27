@@ -44,6 +44,28 @@
     flex: 1;
     box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
     border-radius: 15px;
+    min-height: 384px;
+    padding: 7px 12px;
+    font-family: var(--fontOpensans);
+}
+
+.money-content-action-box p {
+    color: var(--whiteColor);
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+    margin-bottom: 10px;
+}
+
+.money-content-action-box p img {
+    width: 1.3vw;
+    margin-right: 5px;
+}
+
+.row label {
+    color: var(--pictonBlue);
+    font-size: 1vw;
+    margin: 0 10px;
 }
 
 .money-content-info {
