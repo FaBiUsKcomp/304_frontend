@@ -50,7 +50,7 @@ function Money() {
                 </div>
                 <p><img src={MecanicIcon} alt="findpageicon" /> Cadastro de Pagamentos</p>
                 <div className='row'>
-                <Label htfor='mouthscreate' title='Mês' color='pictonBlue' />
+                  <Label htfor='mouthscreate' title='Mês' color='pictonBlue' />
                   <Select id='mouthscreate' color='mediumseaGreen'>
                   <option value="january">Janeiro</option>
                     <option value="february">Fevereiro</option>
@@ -91,10 +91,20 @@ function Money() {
                 <p><img src={MonetizationIcon} alt="findpageicon" /> Dinheiro</p>
                 <div className='row-extends'>
                   <div className='money-content-action-box-value'>
-
+                    <Label title='Valor em Caixa' color='pictonBlue' />
+                    <h4>R$ 45,30</h4>
                   </div>
                   <div className='money-content-action-box-remove'>
-                    
+                    <Label title='Gastar Dinheiro' color='follyRed' />
+                    <div className='row'>
+                      <Label title='Justificativa' color='pictonBlue' />
+                      <Input type='text' color='follyRed' placeholder='Motivo...' />
+                      <Button type='button' color='follyRed' title='Remover' />
+                    </div>
+                    <div className='row'>
+                      <Label title='Valor' color='pictonBlue' />
+                      <Input halfextends={true} type='text' color='follyRed' placeholder='12.00' />
+                    </div>
                   </div>
                 </div>
               </div>
