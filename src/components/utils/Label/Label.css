@@ -1,0 +1,25 @@
+.labeldefault {
+    font-size: 1vw;
+    margin: 0 15px;
+    color: var(--whiteColor);
+}
+
+.labelcolor-pictonBlue {
+    color: var(--pictonBlue);
+}
+
+.labelcolor-follyRed {
+    color: var(--follyRed);
+}
+
+.labelcolor-orangeWeb {
+    color: var(--orangeWeb);
+}
+
+.labelcolor-mediumseaGreen {
+    color: var(--mediumseaGreen);
+}
+
+.labelcolor-purpleDark {
+    color: var(--purpleDark);
+}

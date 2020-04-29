@@ -1,37 +1,43 @@
-.inputdefault {
+.selectdefault {
     width: 100%;
     height: 80%;
     min-height: 21px;
-    resize: vertical;
     border-radius: 20px;
-    background-color: transparent;
     outline: 0;
-    padding-left: 10px;
-    font-size: 16px;
     color: var(--whiteColor);
+    background-color: transparent;
+    font-size: 1vw;
+    text-align-last: center;
 }
 
-.inputlimit {
+.selectlimit {
     width: 25%;
     margin-right: auto;
 }
 
-.inputcolor-pictonBlue {
+.selectdefault option {
+    background-color: var(--yankeersBlue);
+    font-size: 1vw;
+    text-align-last: center;
+    padding-left: 20px;
+}
+
+.selectcolor-pictonBlue {
     border: 1px solid var(--pictonBlue);
 }
 
-.inputcolor-follyRed {
+.selectcolor-follyRed {
     border: 1px solid var(--follyRed);
 }
 
-.inputcolor-orangeWeb {
+.selectcolor-orangeWeb {
     border: 1px solid var(--orangeWeb);
 }
 
-.inputcolor-mediumseaGreen {
+.selectcolor-mediumseaGreen {
     border: 1px solid var(--mediumseaGreen);
 }
 
-.inputcolor-purpleDark {
+.selectcolor-purpleDark {
     border: 1px solid var(--purpleDark);
 }

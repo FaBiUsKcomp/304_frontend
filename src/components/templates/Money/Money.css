@@ -47,6 +47,8 @@
     min-height: 384px;
     padding: 7px 12px;
     font-family: var(--fontOpensans);
+    display: flex;
+    flex-direction: column;
 }
 
 .money-content-action-box p {
@@ -62,10 +64,12 @@
     margin-right: 5px;
 }
 
-.row label {
-    color: var(--pictonBlue);
-    font-size: 1vw;
-    margin: 0 10px;
+.money-content-action-box-value {
+    grid-area: contentvalue;
+}
+
+money-content-action-box-remove {
+    grid-area: contentremove;
 }
 
 .money-content-info {
