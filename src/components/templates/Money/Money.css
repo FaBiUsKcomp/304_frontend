@@ -21,7 +21,7 @@
     font-weight: 300;
     color: var(--pictonBlue);
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .money-box-container h3 img {
@@ -95,4 +95,107 @@
 
 .money-content-info {
     flex: 1;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.money-content-info-payment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--pictonBlue);
+    padding: 0 10px;
+}
+
+.money-content-info-payment p {
+    font-size: 1.1vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.money-content-info-payment p img {
+    width: 1.3vw;
+    margin-right: 5px;
+}
+
+.money-content-info-payment-ok {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.money-content-info-payment-ok-users {
+    flex: 1;
+    display: block;
+    font-family: var(--fontRoboto);
+}
+
+.money-content-info-payment-ok-users p {
+    color: var(--whiteColor);
+    font-size: 1.1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.money-content-info-payment-ok-users p img {
+    width: 1.3vw;
+    margin-left: 20px;
+}
+
+.money-content-info-payment-pending {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.money-content-info-payment-pending-users {
+    flex: 1;
+    display: block;
+    font-family: var(--fontRoboto);
+}
+
+.money-content-info-payment-pending-users p {
+    color: var(--whiteColor);
+    font-size: 1.1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.money-content-info-payment-pending-users p img {
+    width: 1.3vw;
+    margin-left: 20px;
+}
+
+.money-content-info-search {
+    flex: 1;
+    border-left: 1px solid var(--pictonBlue);
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.money-content-info-search p {
+    font-size: 1.1vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.money-content-info-search p img {
+    width: 1.3vw;
+    margin-right: 5px;
+}
+
+.money-content-info-search-result {
+    color: var(--whiteColor);
+    font-size: 1.1vw;
+    display: flex;
+    justify-content: center;
 }

@@ -1,15 +1,23 @@
 import React from 'react';
 import './Money.css'
 
-import Menu from '../../../static/img/menu-pictonBlue.svg'
+//Components
 import Content from '../../Content/Content'
-import FindPageIcon from '../../../static/img/findpage.svg'
-import MecanicIcon from '../../../static/img/mecanic.svg'
-import MonetizationIcon from '../../../static/img/monetization.svg'
 import Label from '../../utils/Label/Label'
 import Input from '../../utils/Input/Input'
 import Select from '../../utils/Select/Select'
 import Button from '../../utils/Button/Button'
+
+//Icons
+import Menu from '../../../static/img/menu-pictonBlue.svg'
+import FindPageIcon from '../../../static/img/findpage.svg'
+import MecanicIcon from '../../../static/img/mecanic.svg'
+import MonetizationIcon from '../../../static/img/monetization.svg'
+import StarIcon from '../../../static/img/star.svg'
+import PendingIcon from '../../../static/img/pending.svg'
+import ChecktrueIcon from  '../../../static/img/check-true.svg'
+import CheckfalseIcon from  '../../../static/img/check-false.svg'
+import CalendarIcon from  '../../../static/img/calendar.svg'
 
 function Money() {
   return (
@@ -103,14 +111,37 @@ function Money() {
                     </div>
                     <div className='row'>
                       <Label title='Valor' color='pictonBlue' />
-                      <Input halfextends={true} type='text' color='follyRed' placeholder='12.00' />
+                      <Input halfextends={true} type='text' color='follyRed' placeholder='Valor com ponto...' />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className='money-content-info'>
-              
+              <div className='money-content-info-payment'>
+                <p className='labelcolor-orangeWeb '><img src={StarIcon} alt="staricon" /> Pagos desse Mês</p>
+                <div className='money-content-info-payment-ok'>
+                  <div className='money-content-info-payment-ok-users'>
+                    <p>Fábio Oliveira <img src={ChecktrueIcon} alt='check-true' /></p>
+                    <p>Filipe <img src={ChecktrueIcon} alt='check-true' /></p>
+                    <p>Thiago <img src={ChecktrueIcon} alt='check-true' /></p>
+                    <p>Jean Santos <img src={ChecktrueIcon} alt='check-true' /></p>
+                  </div>
+                </div>
+                <div className='money-content-info-payment-pending'>
+                  <p className='labelcolor-follyRed'><img src={PendingIcon} alt="pendigicon" /> Pagamentos Pendentes</p>
+                  <div className='money-content-info-payment-pending-users'>
+                    <p>Wagner Zuffi <img src={CheckfalseIcon} alt='check-false' /></p>
+                    <p>Erivelton Soares <img src={CheckfalseIcon} alt='check-false' /></p>
+                  </div>
+                </div>
+              </div>
+              <div className='money-content-info-search'>
+                <p className='labelcolor-pictonBlue'><img src={CalendarIcon} alt="calendaricon" /> Resultados da Consulta</p>
+                <div className='money-content-info-search-result'>
+                  Nenhuma consulta Realizada
+                </div>
+              </div>
             </div>
           </div>
         </div>
