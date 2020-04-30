@@ -1,90 +1,86 @@
 .login-container {
     width: 100vw;
     height: 100vh;
-    background-color: #8e44ad;
+    background-color: var(--yankeersBlue);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login-box {
-    width: 400px;
-    height: 400px;
-    background-color: var(--purpleColor);
+    width: 450px;
+    height: 380px;
+    background-color: var(--yankeersBlue);
     border-radius: 20px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25), -10px -10px 30px rgba(0, 0, 0, 0.25);
     font-family: var(--fontRoboto);
+    display: flex;
+    flex-direction: column;
 }
 
 .login-box h3 {
-    text-align: center;
-    margin: 30px 0;
-    color: var(--whiteColor);
-    font-size: 25px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 15px;
 }
 
-.row-login-field {
+.login-box h3 p {
+    margin-left: 20px;
+    color: var(--whiteColor);
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.login-box form {
+    flex: 1;
+    padding: 3%;
+    text-align: center;
+}
+
+.login-box-container {
     width: 100%;
+    height: 80%;
+    padding: 5% 4%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25), -10px -10px 30px rgba(0, 0, 0, 0.25);
 }
 
-.row-login-field label {
-    margin-left: 30px;
-    margin-bottom: 10px;
-    color: var(--whiteColor);
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.row-login-field input {
-    width: 80%;
+.login-box-container .row {
+    margin-bottom: 30px;
     height: 35px;
-    align-self: center;
-    background-color: var(--fieldColor);
+}
+
+.login-box-container .row label {
+    font-size: 17px;
+}
+
+.login-box-container .row input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, .5);
     border: none;
-    border-radius: 29px;
-    padding-left: 15px;
+    border-radius: 30px;
     outline: 0;
-    color: #333;
     font-size: 16px;
-    transition: .5s;
 }
 
-.row-login-btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.row-login-btn button {
-    width: 150px;
+.login-box-container .row button {
+    margin: auto;
     height: 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--blueColor);
-    color: var(--whiteColor);
-    font-size: 18px;
-    font-weight: bold;
-    transition: .5s;
+    font-size: 16px;
 }
 
-.row-login-btn button:hover {
-    cursor: pointer;
-    background-color: #2980b9;
+.login-notaccount {
+    margin-top: 20px;
 }
 
-.row-notaccount {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+.login-notaccount a {
     color: var(--whiteColor);
-    font-weight: 500;
-    font-size: 15px;
+    text-decoration: unset;
 }
 
 .errorlog {

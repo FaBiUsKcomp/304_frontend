@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import Axios from '../../config/api'
 import './Login.css'
 
+//Components
+import Circle from '../../components/utils/Circle/Circle'
+import Label from '../../components/utils/Label/Label'
+import Button from '../../components/utils/Button/Button'
+
 export default function Login({ history }) {
 
   const [username, setUsername] = useState('')
@@ -9,8 +14,8 @@ export default function Login({ history }) {
 
   const handleSumbit = async e => {
     e.preventDefault()
-    
-    if(!username || !password) {
+
+    if (!username || !password) {
       alert('Preencha todos os campos!') //API de Erro no Futuro!
       return
     }
@@ -21,7 +26,7 @@ export default function Login({ history }) {
   }
 
   const handleAuth = user => {
-    if(user) {
+    if (user) {
       localStorage.setItem('user', JSON.stringify(user))
       history.push('/home')
     } else {
@@ -32,29 +37,36 @@ export default function Login({ history }) {
   return (
     <div className='login-container'>
       <section className='login-box'>
+        <h3>
+          <Circle type='pictonBlue' min />
+          <Circle type='orangeWeb' min />
+          <Circle type='follyRed' min />
+          <Circle type='mediumseaGreen' min />
+          <p>Bem-Vindo ao 304 !</p>
+        </h3>
         <form action="" onSubmit={handleSumbit}>
-          <h3>Welcome</h3>
-          <div className='row-login-field'>
-            <label>Usuário</label>
-            <input value={username} onChange={e => setUsername(e.target.value)} type="text" placeholder="Nome de Usuário" />
+          <div className='login-box-container '>
+            <div className="row">
+              <Label title='Usuário' />
+              <input value={username} onChange={e => setUsername(e.target.value)} type="text" placeholder="Nome de Usuário" />
+            </div>
+            <div className="row">
+              <Label title='Senha' />
+              <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="************" />
+            </div>
+            <div className="row">
+              <Button color='pictonBlue' type='submit' title='Entrar' />
+            </div>
           </div>
-          <div className='row-login-field'>
-            <label>Senha</label>
-            <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="************" />
-          </div>
-          <div className='row-login-btn'>
-            <button type="submit">Enviar</button>
-          </div>
-          <div className='row-notaccount'>
-            <p>É membro novo no App?</p>
-          </div>
+          <p href='#' className='login-notaccount'><a href='/'>Ainda não possui conta no App?</a></p>
         </form>
       </section>
+
       <div className='errorlog'>
         Erro
       </div>
       <div className='toggletheme'>
-        
+
       </div>
     </div>
   )
