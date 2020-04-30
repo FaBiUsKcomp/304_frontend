@@ -4,6 +4,12 @@
     border-radius: 50%;
 }
 
+.circlemin {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+}
+
 .yankeersBlue {
     background-color: #161B40;
 }
