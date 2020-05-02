@@ -9,7 +9,7 @@ import Select from '../../utils/Select/Select'
 import Button from '../../utils/Button/Button'
 
 //Icons
-import Menu from '../../../static/img/menu-pictonBlue.svg'
+import MenuIcon from '../../../static/img/menu-pictonBlue.svg'
 import FindPageIcon from '../../../static/img/findpage.svg'
 import MecanicIcon from '../../../static/img/mecanic.svg'
 import MonetizationIcon from '../../../static/img/monetization.svg'
@@ -24,7 +24,7 @@ function Money() {
     <Content>
       <aside className='money-box'>
         <div className='money-box-container'>
-          <h3><img src={Menu} alt="menu-icon" />Administração da Caixinha</h3>
+          <h3><img src={MenuIcon} alt="menu-icon" />Administração da Caixinha</h3>
           <div className='money-content'>
             <div className='money-content-action'>
               <div className='money-content-action-box'>

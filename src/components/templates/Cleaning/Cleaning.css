@@ -1,4 +1,110 @@
 .cleaning-box {
     flex: 1;
     border-bottom: 15px solid var(--orangeWeb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cleaning-container {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cleaning-container h3 {
+    font-size: 1.3vw;
+    font-weight: 300;
+    color: var(--orangeWeb);
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.cleaning-container h3 img {
+    width: 1.5vw;
+    margin-right: 5px;
+}
+
+.cleaning-content {
+    flex: 1;
+    display: flex;
+    padding: 1%;
+}
+
+.cleaning-content-action {
+    flex: 1;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .25), 10px 10px 30px rgba(0, 0, 0, .25);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.cleaning-content-action h3 {
+    color: var(--whiteColor);
+    font-size: 1.2vw;
+    margin-bottom: 4%;
+}
+
+.cleaning-content-action .row {
+    height: 2vh;
+    padding: 0 2%;
+}
+
+.cleaning-content-action p { 
+    color: var(--whiteColor);
+    font-family: var(--fontOpensans);
+    font-weight: bold;
+    font-size: .9vw;
+    padding: 0 1%;
+}
+
+.cleaning-content-action .row-btn {
+    width: 100%;
+    height: 3.5vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.cleaning-content-action .row-btn button {
+    height: 100%;
+}
+
+.cleaning-content-status {
+    flex: 2;
+}
+
+.cleaning-content-status h2 {
+    font-size: 1.9vw;
+    font-weight: 300;
+    display: flex;
+    color: var(--whiteColor);
+    margin: 1% 3%;
+}
+
+.cleaning-content-status h2 img {
+    width: 2.1vw;
+    margin-right: 1%;
+}
+
+.cleaning-content-status h3 {
+    color: var(--follyRed);
+    font-size: 1.3vw;
+    font-weight: 300;
+    margin: 1% 3%;
+    font-family: var(--fontOpensans);
+}
+
+.cleaning-content-status h3 img {
+    width: 1.4vw;
+    margin-right: 1%;
+}
+
+.cleaning-content-status p {
+    color: var(--whiteColor);
+    margin: 4% 3% 3%;
 }
