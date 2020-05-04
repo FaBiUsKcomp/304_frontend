@@ -1,4 +1,96 @@
 .dispensation-box {
     flex: 1;
     border-bottom: 15px solid var(--follyRed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dispensation-container {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dispensation-container h3 {
+    font-size: 1.3vw;
+    font-weight: 300;
+    color: var(--follyRed);
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.dispensation-container h3 img {
+    width: 1.5vw;
+    margin-right: 5px;
+}
+
+.dispensation-content {
+    flex: 1;
+    border-radius: 20px;
+    margin: 1% 1%;
+    padding: 1%;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, .20), 10px 10px 30px rgba(0, 0, 0, .20);
+    font-family: var(--fontRoboto);
+    display: flex;
+    flex-direction: column;
+}
+
+.dispensation-content p {
+    color: var(--whiteColor);
+    display: flex;
+    align-items: center;
+    font-size: 1.1vw;
+    margin-bottom: 10px;
+}
+
+.dispensation-content p img {
+    width: 1.3vw;
+    margin-right: 5px;
+}
+
+.dispensation-content .row {
+    width: 70%;
+}
+
+.dispensation-content .row button {
+    margin: 0 20px;
+}
+
+.dispensation-content-products {
+    flex: 1;
+    border-radius: 20px;
+    display: flex;
+    margin-top: .5%;
+}
+
+.dispensation-content-products-all {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dispensation-content-products-all-itens {
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    border: 1px solid var(--orangeWeb);
+    overflow-y: scroll;
+    padding: 1% 2%;
+}
+
+.dispensation-content-products-all-missing {
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    border: 1px solid var(--follyRed);
+    overflow-y: scroll;
 }

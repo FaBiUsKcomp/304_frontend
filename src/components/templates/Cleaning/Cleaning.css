@@ -40,11 +40,12 @@
     box-shadow: -10px -10px 30px rgba(0, 0, 0, .25), 10px 10px 30px rgba(0, 0, 0, .25);
     border-radius: 20px;
     padding: 1%;
+    font-family: var(--fontRoboto);
 }
 
 .cleaning-content-action h3 {
     color: var(--whiteColor);
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     margin-bottom: 4%;
 }
 
