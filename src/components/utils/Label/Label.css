@@ -2,6 +2,7 @@
     font-size: 1vw;
     margin: 0 15px;
     color: var(--whiteColor);
+    white-space: nowrap;
 }
 
 .labelcolor-pictonBlue {
