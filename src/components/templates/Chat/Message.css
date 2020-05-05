@@ -59,7 +59,7 @@
 .message-my {
     background-color: #CA89E6;
     color: var(--whiteColor);
-    border: 1px solid #CA89E6;
+    border: 1px solid var(--mediumseaGreen);
     align-self: flex-end;
 }
 

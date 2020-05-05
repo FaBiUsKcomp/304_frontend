@@ -2,13 +2,20 @@ import React from 'react';
 import { SendRounded } from '@material-ui/icons'
 import './Chat.css'
 
+//Components
 import Content from '../../Content/Content'
 import Message from './Message'
 import Loader from '../../utils/Loader/Loader'
+import Circle from '../../utils/Circle/Circle'
 
+//Icons
 import Online from '../../../static/img/online.png'
 import Offline from '../../../static/img/offline.png'
+import MenuIcon from '../../../static/img/menu-mediumseaGreen.svg'
+import UsersIcon from '../../../static/img/users.svg'
+import ChatIcon from '../../../static/img/chat.svg'
 
+//Utils
 import Axios from '../../../config/api'
 import io from 'socket.io-client'
 
@@ -124,41 +131,20 @@ class Chat extends React.Component {
         {
           this.state.isLoading ? <Loader /> :
             <aside className='chat-box'>
-              <div className='chat-container'>
-                <div className='displaychat-box'>
-                  {
-                    this.state.usersMsg.map((msg, key) => {
-                      return (
-                        <Message
-                          key={key}
-                          type={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'my' : 'other'}
-                          user={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'Você' : msg.username}
-                          messagetext={msg.messagetext}
-                          hour={msg.hour}
-                        />
-                      )
-                    })
-                  }
-                </div>
-                <div className='inputchat-box'>
-                  <input type="text" name="" id=""
-                    placeholder='Digite uma mensagem...'
-                    value={this.state.currentMsg}
-                    onChange={e => this.setState({ currentMsg: e.target.value })} />
-                  <button type='button' onClick={this.handleMessage}><SendRounded /></button>
-                </div>
-              </div>
-              {
-                this.state.userstatus ?
-                  <div className='users-status'>
-                    <div className='users-status-container'>
-                      <img src={this.state.userstatusimg} alt='Online' />
-                      <p>{this.state.userstatusmessage}</p>
+              <div className='chat-box-container'>
+                <h3><img src={MenuIcon} alt="menu-icon" />Mensagens do Chat</h3>
+                <div className='chat-box-content'>
+                  <div className='chat-box-content-usersinfo'>
+                    <h3><img src={UsersIcon} alt="users-icon" />Usuários Online</h3>
+                    <div className="chat-box-content-usersinfo-display">
+                      {/*Users Online*/}
                     </div>
                   </div>
-                  :
-                  null
-              }
+                  <div className='chat-box-content-chat'>
+                    <h3><img src={ChatIcon} alt="chat-icon" />Mensagens</h3>
+                  </div>
+                </div>
+              </div>
             </aside>
         }
       </Content>
@@ -167,3 +153,38 @@ class Chat extends React.Component {
 }
 
 export default Chat
+
+/*<div className='displaychat-box'>
+  {
+    this.state.usersMsg.map((msg, key) => {
+      return (
+        <Message
+          key={key}
+          type={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'my' : 'other'}
+          user={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'Você' : msg.username}
+          messagetext={msg.messagetext}
+          hour={msg.hour}
+        />
+      )
+    })
+  }
+</div>
+<div className='inputchat-box'>
+  <input type="text" name="" id=""
+    placeholder='Digite uma mensagem...'
+    value={this.state.currentMsg}
+    onChange={e => this.setState({ currentMsg: e.target.value })} />
+  <button type='button' onClick={this.handleMessage}><SendRounded /></button>
+</div>
+
+{
+  this.state.userstatus ?
+    <div className='users-status'>
+      <div className='users-status-container'>
+        <img src={this.state.userstatusimg} alt='Online' />
+        <p>{this.state.userstatusmessage}</p>
+      </div>
+    </div>
+    :
+    null
+}*/
