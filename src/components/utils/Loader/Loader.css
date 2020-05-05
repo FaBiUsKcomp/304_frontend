@@ -10,8 +10,8 @@ body {
   margin-top: -3rem;
   width: 3rem;
   height: 3rem;
-  border: solid 8px #fff;
-  border-top: solid 8px #9B59B6;
+  border: solid 8px var(--mediumseaGreen);
+  border-top: solid 8px var(--yankeersBlue);
   border-radius: 50%;
   animation-name: rotation;
   animation-duration: 2s;
