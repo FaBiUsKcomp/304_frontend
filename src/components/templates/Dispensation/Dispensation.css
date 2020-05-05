@@ -65,13 +65,14 @@
     flex: 1;
     border-radius: 20px;
     display: flex;
-    margin-top: .5%;
+    margin-top: 1%;
 }
 
 .dispensation-content-products-all {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 45vh;
 }
 
 .dispensation-content-products-all-itens {
@@ -81,8 +82,14 @@
     height: 90%;
     border-radius: 20px;
     border: 1px solid var(--orangeWeb);
+    padding: 2%;
+    display: flex;
+}
+
+.dispensation-content-products-all-itens-list {
+    flex: 1;
+    display: block;
     overflow-y: scroll;
-    padding: 1% 2%;
 }
 
 .dispensation-content-products-all-missing {
@@ -92,5 +99,40 @@
     height: 90%;
     border-radius: 20px;
     border: 1px solid var(--follyRed);
+    padding: 2%;
+    display: flex;
+}
+
+.dispensation-content-products-all-missing-list {
+    flex: 1;
+    display: block;
     overflow-y: scroll;
+}
+
+.dispensation-content-products-all-itens-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.dispensation-content-products-all-itens-list::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px rgba(0, 0, 0,.2); */
+    border-radius: 10px;
+}
+   
+.dispensation-content-products-all-itens-list::-webkit-scrollbar-thumb {
+    background: var(--orangeWeb); 
+    border-radius: 10px;
+}
+
+.dispensation-content-products-all-missing-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .dispensation-content-products-all-missing-list::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px rgba(0, 0, 0,.2); */
+    border-radius: 10px;
+}
+   
+.dispensation-content-products-all-missing-list::-webkit-scrollbar-thumb {
+    background: var(--follyRed); 
+    border-radius: 10px;
 }
