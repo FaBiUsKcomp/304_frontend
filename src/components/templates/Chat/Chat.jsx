@@ -42,6 +42,7 @@ class Chat extends React.Component {
   async componentDidMount() {
     await this.getAllMessages()
     this.setState({ isLoading: false })
+    this.scrollToBottom()
 
     socket.emit('userconnect', `${JSON.parse(localStorage.getItem('user')).username} está online!`)
     socket.on('userconnect', message => this.setUserStatusLog(message, 'connect'))
@@ -49,6 +50,7 @@ class Chat extends React.Component {
 
     socket.on('chatmessage', message => {
       this.createMyMsg(message, 'other')
+      this.scrollToBottom()
     })
   }
 
@@ -88,6 +90,8 @@ class Chat extends React.Component {
     await Axios.post('/chat', message)
       .then(socket.emit('chatmessage', message))
       .catch(error => alert(`Erro ao enviar mensagens ${error}`))
+    
+    this.scrollToBottom()
   }
 
   async getAllMessages() {
@@ -125,11 +129,16 @@ class Chat extends React.Component {
     }.bind(this), 3000);
   }
 
+  scrollToBottom = () => {
+    const chat = document.querySelector('.chat-box-content-chat-display-messages')
+    chat.scrollTop = chat.scrollHeight
+  }
+
   render() {
     return (
       <Content>
         {
-          this.state.isLoading ? <Loader color='mediumseaGreen'/> :
+          this.state.isLoading ? <Loader color='mediumseaGreen' /> :
             <aside className='chat-box'>
               <div className='chat-box-container'>
                 <h3><img src={MenuIcon} alt="menu-icon" />Mensagens do Chat</h3>
@@ -143,7 +152,7 @@ class Chat extends React.Component {
                   <div className='chat-box-content-chat'>
                     <h3><img src={ChatIcon} alt="chat-icon" />Mensagens</h3>
                     <div className='chat-box-content-chat-display'>
-                      <div className='chat-box-content-chat-display-messages'>
+                      <div id='chat-messages' className='chat-box-content-chat-display-messages'>
                         {
                           this.state.usersMsg.map((msg, key) => {
                             return (
@@ -169,6 +178,17 @@ class Chat extends React.Component {
                   </div>
                 </div>
               </div>
+              {
+                this.state.userstatus ?
+                  <div className='users-status'>
+                    <div className='users-status-container'>
+                      <img src={this.state.userstatusimg} alt='Online' />
+                      <p>{this.state.userstatusmessage}</p>
+                    </div>
+                  </div>
+                  :
+                  null
+              }
             </aside>
         }
       </Content>
@@ -177,38 +197,3 @@ class Chat extends React.Component {
 }
 
 export default Chat
-
-/*<div className='displaychat-box'>
-  {
-    this.state.usersMsg.map((msg, key) => {
-      return (
-        <Message
-          key={key}
-          type={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'my' : 'other'}
-          user={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'Você' : msg.username}
-          messagetext={msg.messagetext}
-          hour={msg.hour}
-        />
-      )
-    })
-  }
-</div>
-<div className='inputchat-box'>
-  <input type="text" name="" id=""
-    placeholder='Digite uma mensagem...'
-    value={this.state.currentMsg}
-    onChange={e => this.setState({ currentMsg: e.target.value })} />
-  <button type='button' onClick={this.handleMessage}><SendRounded /></button>
-</div>
-
-{
-  this.state.userstatus ?
-    <div className='users-status'>
-      <div className='users-status-container'>
-        <img src={this.state.userstatusimg} alt='Online' />
-        <p>{this.state.userstatusmessage}</p>
-      </div>
-    </div>
-    :
-    null
-}*/
