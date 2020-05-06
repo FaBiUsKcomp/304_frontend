@@ -142,6 +142,30 @@ class Chat extends React.Component {
                   </div>
                   <div className='chat-box-content-chat'>
                     <h3><img src={ChatIcon} alt="chat-icon" />Mensagens</h3>
+                    <div className='chat-box-content-chat-display'>
+                      <div className='chat-box-content-chat-display-messages'>
+                        {
+                          this.state.usersMsg.map((msg, key) => {
+                            return (
+                              <Message
+                                key={key}
+                                type={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'my' : 'other'}
+                                user={msg.username === JSON.parse(localStorage.getItem('user')).username ? 'Você' : msg.username}
+                                messagetext={msg.messagetext}
+                                hour={msg.hour}
+                              />
+                            )
+                          })
+                        }
+                      </div>
+                    </div>
+                    <div className='chat-box-content-chat-input'>
+                      <input type="text" name="" id=""
+                        placeholder='Digite uma mensagem...'
+                        value={this.state.currentMsg}
+                        onChange={e => this.setState({ currentMsg: e.target.value })} />
+                      <button type='button' onClick={this.handleMessage}><SendRounded /></button>
+                    </div>
                   </div>
                 </div>
               </div>
