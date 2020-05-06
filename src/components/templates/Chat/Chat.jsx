@@ -129,7 +129,7 @@ class Chat extends React.Component {
     return (
       <Content>
         {
-          this.state.isLoading ? <Loader /> :
+          this.state.isLoading ? <Loader color='mediumseaGreen'/> :
             <aside className='chat-box'>
               <div className='chat-box-container'>
                 <h3><img src={MenuIcon} alt="menu-icon" />Mensagens do Chat</h3>

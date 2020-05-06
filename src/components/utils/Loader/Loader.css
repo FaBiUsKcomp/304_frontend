@@ -19,6 +19,35 @@ body {
   animation-timing-function: linear;
 }
 
+.circle-yankeersBlue {
+  border: solid 8px #161B40;
+}
+
+.circle-pictonBlue {
+  border: solid 8px #43BEE5;
+  border-top: solid 8px var(--yankeersBlue);
+}
+
+.circle-follyRed {
+  border: solid 8px #F40058;
+  border-top: solid 8px var(--yankeersBlue);
+}
+
+.circle-orangeWeb {
+  border: solid 8px #EFA500;
+  border-top: solid 8px var(--yankeersBlue);
+}
+
+.circle-mediumseaGreen {
+  border: solid 8px #41B853;
+  border-top: solid 8px var(--yankeersBlue);
+}
+
+.circle-purpleDark {
+  border: solid 8px #4A5AD9;
+  border-top: solid 8px var(--yankeersBlue);
+}
+
 @keyframes rotation {
   25% {
     transform: rotate(90deg);
