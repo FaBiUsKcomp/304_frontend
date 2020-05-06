@@ -30,6 +30,7 @@
     font-size: 1.1vw;
     margin-top: 2%;
     margin-left: 6%;
+    margin-right: 6%;
 }
 
 .message-hour {
@@ -37,6 +38,7 @@
     font-size: .9vw;
     margin-top: 2%;
     margin-left: 60%;
+    margin-bottom: 1%;
 }
 
 .my {
@@ -53,10 +55,12 @@
     color: var(--mediumseaGreen);
     border: 1px solid var(--mediumseaGreen);
     align-self: flex-end;
+    border-bottom-right-radius: 0px;
 }
 
 .message-other {
     color: var(--orangeWeb);
     border: 1px solid var(--orangeWeb);
     align-self: flex-start;
+    border-top-left-radius: 0px;
 }
