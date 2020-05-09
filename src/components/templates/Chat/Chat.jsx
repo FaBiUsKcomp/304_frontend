@@ -6,7 +6,7 @@ import './Chat.css'
 import Content from '../../Content/Content'
 import Message from './Message'
 import Loader from '../../utils/Loader/Loader'
-import Circle from '../../utils/Circle/Circle'
+//import Circle from '../../utils/Circle/Circle'
 
 //Icons
 import Online from '../../../static/img/online.png'

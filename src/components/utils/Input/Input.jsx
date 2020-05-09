@@ -3,6 +3,9 @@ import './Input.css'
 
 export default props =>
     <input type={props.type} 
-    className={`inputdefault inputcolor-${props.color} 
-    ${props.half ? 'inputlimit' : ''} ${props.halfextends ? 'inputlimitextends' : ''}`} 
-    placeholder={props.placeholder} />
+        className={`inputdefault inputcolor-${props.color} 
+        ${props.half ? 'inputlimit' : ''} ${props.halfextends ? 'inputlimitextends' : ''}`} 
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={props.onChange}
+     />
