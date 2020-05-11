@@ -44,12 +44,22 @@ export default class Dispensation extends Component {
   handleNewProduct = async (e) => {
     e.preventDefault()
 
-    if(!this.state.newProduct) alert('Nome inválido!')
+    if (!this.state.newProduct) alert('Nome inválido!')
 
     const addProduct = { name: this.state.newProduct }
 
     await Axios.post('/dispensation', addProduct)
       .then(product => this.state.productsOfDispensation.push(product.data))
+      .catch(error => alert(error))
+
+    this.setState({ newProduct: '' })
+  }
+
+  addProductToMissingProduct = async (e) => {
+    e.preventDefault()
+    const productMissing = { _id: e.target.id, name: e.target.name }
+    await Axios.post('/dispensation/missing', productMissing)
+      .then(product => this.state.missingProductsOfDispensation.push(product.data))
       .catch(error => alert(error))
 
     this.setState({ newProduct: '' })
@@ -69,14 +79,26 @@ export default class Dispensation extends Component {
 
   deleteProductOfDispensation = async (e) => {
     e.preventDefault()
-    await Axios.delete('/dispensation', { _id: e.target.id })
+    await Axios.delete(`/dispensation/${e.target.id}`)
       .then(productDelete => {
         const productsTemp = this.state.productsOfDispensation
           .filter(product => product._id !== productDelete.data._id)
         const missingProductsTemp = this.state.missingProductsOfDispensation
           .filter(product => product._id !== productDelete.data._id)
-          
+
         this.setState({ productsOfDispensation: productsTemp, missingProductsOfDispensation: missingProductsTemp })
+      })
+      .catch(error => alert(error))
+  }
+
+  deleteMissingProductOfDispensation = async (e) => {
+    e.preventDefault()
+    await Axios.delete(`/dispensation/missing/${e.target.id}`)
+      .then(productDelete => {
+        const missingProductsTemp = this.state.missingProductsOfDispensation
+          .filter(product => product._id !== productDelete.data._id)
+
+        this.setState({ missingProductsOfDispensation: missingProductsTemp })
       })
       .catch(error => alert(error))
   }
@@ -109,12 +131,12 @@ export default class Dispensation extends Component {
                               return <span id={product._id} key={product.name}>
                                 {product.name}
                                 <div className='products-list-box-img'>
-                                  <img id={product._id} src={StoreCarAddIcon} alt='Add-icon' 
+                                  <img name={product.name} id={product._id} src={StoreCarAddIcon} alt='Add-icon'
                                     title='Adicionar Produto'
-                                    onClick={this.deleteProductOfDispensation} 
+                                    onClick={this.addProductToMissingProduct}
                                   />
-                                  <img id={product._id} src={RemoveIcon} alt='Remove-icon' title='Remover Produto' 
-                                    onClick={this.deleteProductOfDispensation} 
+                                  <img id={product._id} src={RemoveIcon} alt='Remove-icon' title='Remover Produto'
+                                    onClick={this.deleteProductOfDispensation}
                                   />
                                 </div>
                               </span>
@@ -132,8 +154,8 @@ export default class Dispensation extends Component {
                               return <span key={product.name}>
                                 {product.name}
                                 <div className='products-list-box-img'>
-                                  <img src={RemoveIcon} alt='Remove-icon' title='Remover Produto'
-                                    
+                                  <img id={product._id} src={RemoveIcon} alt='Remove-icon' title='Remover Produto'
+                                    onClick={this.deleteMissingProductOfDispensation}
                                   />
                                 </div>
                               </span>
