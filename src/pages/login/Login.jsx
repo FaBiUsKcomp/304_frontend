@@ -7,6 +7,9 @@ import Circle from '../../components/utils/Circle/Circle'
 import Label from '../../components/utils/Label/Label'
 import Button from '../../components/utils/Button/Button'
 
+//Utils
+import { notice } from '../../static/js/jbox'
+
 export default function Login({ history }) {
 
   const [username, setUsername] = useState('')
@@ -16,13 +19,13 @@ export default function Login({ history }) {
     e.preventDefault()
 
     if (!username || !password) {
-      alert('Preencha todos os campos!') //API de Erro no Futuro!
+      notice('red', 'Preencha os campos!')
       return
     }
 
     await Axios.post('/login', { username, password })
       .then(user => handleAuth(user.data))
-      .catch(error => console.log(error.data)) //API de Erro no Futuro!
+      .catch(error => notice('red', 'Usuário/Senha incorreto!')) //API de Erro no Futuro!
   }
 
   const handleAuth = user => {

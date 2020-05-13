@@ -146,7 +146,7 @@ class Chat extends React.Component {
                   <div className='chat-box-content-usersinfo'>
                     <h3><img src={UsersIcon} alt="users-icon" />Usuários Online</h3>
                     <div className="chat-box-content-usersinfo-display">
-                      {/*Users Online*/}
+                      {/*Usuários Logados*/}
                     </div>
                   </div>
                   <div className='chat-box-content-chat'>
