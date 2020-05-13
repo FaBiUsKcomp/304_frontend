@@ -18,6 +18,7 @@ import StoreCarFoundIcon from '../../../static/img/store-car-found.svg'
 
 //Utils
 import Axios from '../../../config/api'
+import { notice } from '../../../static/js/jbox'
 
 const defaultState = {
   newProduct: '',
@@ -49,7 +50,10 @@ export default class Dispensation extends Component {
     const addProduct = { name: this.state.newProduct }
 
     await Axios.post('/dispensation', addProduct)
-      .then(product => this.state.productsOfDispensation.push(product.data))
+      .then(product => { 
+        this.state.productsOfDispensation.push(product.data) 
+        notice('green', 'Produto Adicionado!') 
+      })
       .catch(error => alert(error))
 
     this.setState({ newProduct: '' })
@@ -59,7 +63,10 @@ export default class Dispensation extends Component {
     e.preventDefault()
     const productMissing = { _id: e.target.id, name: e.target.name }
     await Axios.post('/dispensation/missing', productMissing)
-      .then(product => this.state.missingProductsOfDispensation.push(product.data))
+      .then(product => {
+        this.state.missingProductsOfDispensation.push(product.data)
+        notice('green', 'Produto Adicionado!') 
+      })
       .catch(error => alert(error))
 
     this.setState({ newProduct: '' })
@@ -87,6 +94,7 @@ export default class Dispensation extends Component {
           .filter(product => product._id !== productDelete.data._id)
 
         this.setState({ productsOfDispensation: productsTemp, missingProductsOfDispensation: missingProductsTemp })
+        notice('red', 'Produto Removido') 
       })
       .catch(error => alert(error))
   }
@@ -99,6 +107,7 @@ export default class Dispensation extends Component {
           .filter(product => product._id !== productDelete.data._id)
 
         this.setState({ missingProductsOfDispensation: missingProductsTemp })
+        notice('red', 'Produto Removido') 
       })
       .catch(error => alert(error))
   }
