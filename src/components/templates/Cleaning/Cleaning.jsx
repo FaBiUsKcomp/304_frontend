@@ -59,7 +59,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -71,7 +71,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -83,7 +83,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -95,7 +95,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -107,7 +107,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -119,7 +119,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>
@@ -131,7 +131,7 @@ export default class Cleaning extends Component {
                       <option>Reposição</option>
                       {
                         this.state.allUsers.map(user => {
-                          return <option>{user.username}</option>
+                          return <option key={user.username}>{user.username}</option>
                         })
                       }
                     </Select>

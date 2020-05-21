@@ -52,7 +52,7 @@ export default class Dispensation extends Component {
     await Axios.post('/dispensation', addProduct)
       .then(product => { 
         this.state.productsOfDispensation.push(product.data) 
-        notice('green', 'Produto Adicionado!') 
+        notice('green', 'Cadastrado com Sucesso!') 
       })
       .catch(error => alert(error))
 
